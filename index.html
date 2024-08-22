@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Objetos de Compra</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Buscador de Objetos de Compra</h1>
+    <div class="alineado">
+        <div>
+            <input id="buscador" class="input is-link input" type="text" onchange="filterList()" placeholder="Text input"/>
+        </div>
+        <div>
+            <button class="button is-link is-rounded">Search</button>
+        </div>
+    </div>
+
+    <div id="productCard" class="fixed-grid has-3-cols grid">
+      
+    </div>
+    
+
+</body>
+
+</html>
