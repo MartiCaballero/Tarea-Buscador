@@ -1,4 +1,11 @@
-
+h1 {
+    font-size: 30px;
+    color: rgb(16, 16, 63);
+    font-weight: bold;
+}
+body{
+    background-color: rgb(111, 111, 136);
+}
 .input{
     width: 70%;
     padding: 5px;
