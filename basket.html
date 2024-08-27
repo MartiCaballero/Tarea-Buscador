@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canasta de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Shopping cart</h1>
+</header>
+
+<div id="basketContainer"></div>
+
+<script>
+  function displayBasket() {
+    const basketContainer = document.getElementById('basketContainer');
+    basketContainer.innerHTML = '';
+
+    let basket = JSON.parse(localStorage.getItem('basket')) || [];
+
+    if (basket.length === 0) {
+      basketContainer.innerHTML = "<p>Tu canasta está vacía.</p>";
+    } else {
+      basket.forEach((product) => {
+        const basketItem = `
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="${product.image}" alt="${product.name}" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">${product.name}</p>
+                  <p class="subtitle is-6">$${product.price}</p>
+                </div>
+              </div>
+              <div class="content">
+                ${product.description}
+              </div>
+            </div>
+          </div>
+        `;
+        basketContainer.innerHTML += basketItem;
+      });
+    }
+  }
+
+  displayBasket();
+</script>
+
+</body>
+</html>

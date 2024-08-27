@@ -1,8 +1,37 @@
 h1 {
-    font-size: 30px;
-    color: rgb(16, 16, 63);
+    font-size: 60px;
+    color: rgba(238, 243, 80, 0.722);
     font-weight: bold;
+    text-shadow: 
+    -2px -2px 1px rgb(28, 12, 92),
+    2px -2px 1px rgb(28, 12, 92), 
+   -2px  2px 1px rgb(28, 12, 92), 
+    2px  2px 1px rgb(28, 12, 92);
 }
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#itemNotFound {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+  
+html,
 body{
     background-color: rgb(111, 111, 136);
 }
@@ -30,3 +59,64 @@ body{
 .grid{
     grid-template-columns: repeat(3, 1fr);
 }
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    /**min-height: 75%;*/
+}
+
+.modal-content input[type="text"], .modal-content input[type="number"] {
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+
+
+  #productCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    cursor: move;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown.is-active .dropdown-content {
+    display: block;
+  }

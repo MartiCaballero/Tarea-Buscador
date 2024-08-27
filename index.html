@@ -4,27 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Objetos de Compra</title>
+    <title>Product shopping searcher</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Buscador de Objetos de Compra</h1>
+    
+    <h1>Product shopping searcher</h1>
     <div class="alineado">
         <div>
             <input id="buscador" class="input is-link input" type="text" onchange="filterList()" placeholder="Text input"/>
         </div>
         <div>
             <button class="button is-link is-rounded" onclick="filterList()">Search</button>
+            <button class="button is-link is-rounded" onclick="showNewProduct()">New Product</button>
+            <div class="dropdown is-active">
+                <button>
+                    <select id="dropdown1" class="button is-link is-rounded" onchange="handleDropdownChange()">
+                        <option value="op1">No filter</option>
+                        <option value="op2">Max to min</option>
+                        <option value="op3">Min to max</option>
+                    </select> 
+                </button>
+            </div>
+            <div  class="button is-link is-rounded" id="shop" onclick="goToBasket()">Canasta</div>
+            
         </div>
+
+        <div id="modalNewProduct" class="modal">
+            <div class="modal-background">
+            </div>
+            <div class="modal-content">
+                New product..
+                <div>
+                    <input type="text" id="newProductName" placeholder="Product Name">
+                    <input type="text" id="newProductDescription" placeholder="Product Description">
+                    <input type="number" id="newProductPrice" placeholder="Product Price">
+                    <input type="text" id="newProductImage" placeholder="Product Image URL">
+                    <button class="button is-link is-rounded" onclick="newProduct()">New Product</button>
+                  </div>                  
+            </div>
+            <button class="modal-close is-large" aria-label="close" onclick="closeNewProductModal()"></button>
+        </div>
+
+        <div id="modalProductDetails" class="modal">
+            <div class="modal-background"></div>
+            <div id="modalProductDetailsContent" class="modal-content">
+            </div>
+            <button class="modal-close is-large" aria-label="close" onclick="closeDetailsModal()"></button>
+        </div>
+
+    
     </div>
 
     <div id="productCard" class="fixed-grid has-3-cols grid">
       
     </div>
-    
 
 </body>
 
