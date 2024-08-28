@@ -164,12 +164,13 @@ function displayProducts() {
     </div>
     `;
   } else {
-    filteredProducts.forEach((product) => {
+    filteredProducts.forEach((product, index) => {
       const productCard = `
     <div class="card" onclick="showDetails(this.innerHTML)">
       <div class="card-image">
             <figure class="image is-4by3">
               <img
+                id="product-${index}"
                 src="${product.image}"
                 alt="${product.name}"
               />
