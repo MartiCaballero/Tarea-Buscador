@@ -1,3 +1,10 @@
+#tiltepagina{
+  font-size: 70px;
+  font-weight: 600;
+  color: #fdfdfe;
+  text-shadow: 0px 0px 5px #340bd9, 0px 0px 10px  #340bd9, 0px 0px 10px #340bd9,
+    0px 0px 20px #b393d3;
+}
 h1 {
     font-size: 55px;
     font-family: serif;
@@ -31,6 +38,7 @@ header {
 html,
 body{
     background-color: rgb(111, 111, 136);
+    background-color: #301934;
 }
 .input{
     width: 70%;
