@@ -166,11 +166,10 @@ function displayProducts() {
   } else {
     filteredProducts.forEach((product, index) => {
       const productCard = `
-    <div class="card" onclick="showDetails(this.innerHTML)">
+    <div class="card" draggable="true" id="product-${index}" onclick="showDetails(this.innerHTML)">
       <div class="card-image">
             <figure class="image is-4by3">
               <img
-                id="product-${index}"
                 src="${product.image}"
                 alt="${product.name}"
               />
