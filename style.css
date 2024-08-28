@@ -122,3 +122,12 @@ body{
   .dropdown.is-active .dropdown-content {
     display: block;
   }
+
+  #shop {
+    position: fixed;
+    margin: 10px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    padding: 35px;
+  }
