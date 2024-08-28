@@ -296,3 +296,8 @@ function closeDetailsModal(){
   const detailsModal = document.getElementById('modalProductDetails');
   detailsModal.classList.remove("is-active");
 }
+
+function emptyCart(){
+  localStorage.clear();
+  window.location.reload()
+}
