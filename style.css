@@ -1,14 +1,9 @@
 h1 {
     font-size: 55px;
     font-family: serif;
-    color: rgba(238, 243, 80, 0.722);
+    color: blue;
     font-weight: bold;
     padding: 1%;
-    text-shadow: 
-    -2px -2px 1px rgb(28, 12, 92),
-    2px -2px 1px rgb(28, 12, 92), 
-   -2px  2px 1px rgb(28, 12, 92), 
-    2px  2px 1px rgb(28, 12, 92);
 }
 
 h2 {
